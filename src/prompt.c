@@ -6,7 +6,7 @@
 /*   By: stales <stales@student.42.angouleme.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 12:00:47 by stales            #+#    #+#             */
-/*   Updated: 2022/06/02 19:14:40 by stales           ###   ########.fr       */
+/*   Updated: 2022/06/02 19:24:18 by stales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ void	set_prompt(t_prompt *p)
 	ft_memcpy((char *)(p->buf + p->i), p->pwd, ft_strlen(p->pwd));
 	p->i += ft_strlen(p->pwd);
 	ft_memcpy((char *)(p->buf + p->i), "\033[00m]$ ", 8);
-	p->i = 0;
 }
