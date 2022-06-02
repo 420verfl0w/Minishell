@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "libft.h": "c",
+        "minishell.h": "c",
+        "unistd.h": "c",
+        "keymaps.h": "c",
+        "stdlib.h": "c",
+        "readline.h": "c",
+        "history.h": "c"
+    }
+}

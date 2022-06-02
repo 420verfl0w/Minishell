@@ -1,0 +1,11 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/nfs/homes/stales/Documents/Minishell'
+make -C lib/libft all
+ 
+gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/prompt.o src/prompt.c
+gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/console.o src/console.c
+gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/handler.o src/handler.c
+gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/main.o src/main.c
+gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft src/prompt.o src/console.o src/handler.o src/main.o -o minishell lib/libft/libft.a -lreadline
+make: Leaving directory '/nfs/homes/stales/Documents/Minishell'
+ 
