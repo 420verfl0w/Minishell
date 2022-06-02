@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jun  2 18:19:57 2022
+# Make data base, printed on Thu Jun  2 20:32:30 2022
 
 # Variables
 
@@ -21,7 +21,9 @@ SRC = src/prompt.c src/console.c src/handler.c src/main.c
 # environment
 PULSE_SERVER = unix:/run/flatpak/pulse/native
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101065/vscode-ipc-135615f6-184c-4719-978b-f989ac2b582c.sock
+GJS_DEBUG_OUTPUT = stderr
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101065/vscode-ipc-ff548afd-ccd5-40e1-ae5c-159996bbfa70.sock
 # environment
 SBX_CHROME_API_RQ = 1
 # environment
@@ -147,6 +149,8 @@ XMODIFIERS = @im=ibus
 # environment
 LD_LIBRARY_PATH = /app/lib
 # environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# environment
 SANDBOX_LD_LIBRARY_PATH = /app/lib
 # environment
 SHLVL = 0
@@ -167,15 +171,13 @@ DBUS_SYSTEM_BUS_ADDRESS = unix:path=/run/dbus/system_bus_socket
 # environment
 XDG_CONFIG_HOME = /nfs/homes/stales/.var/app/com.visualstudio.code/config
 # environment
-INVOCATION_ID = d4c1118cd5284a96b6bc4e7fb8eae125
+INVOCATION_ID = 12bd0705b732417c9dafe5c09053fed0
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
 ?F = $(notdir $?)
 # makefile (from 'Makefile', line 1)
 NAME = minishell
-# environment
-DESKTOP_AUTOSTART_ID = 106786b8a2a03c91fe165418679134722800007405400017
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # automatic
@@ -195,7 +197,7 @@ LOGNAME = stales
 # environment
 container = flatpak
 # environment
-GIO_LAUNCHED_DESKTOP_FILE = /nfs/homes/stales/.config/autostart/com.visualstudio.code.desktop
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/flatpak/exports/share/applications/com.visualstudio.code.desktop
 # makefile
 .DEFAULT_GOAL := all
 # environment
@@ -211,7 +213,7 @@ MAKE_VERSION := 4.3
 # environment
 MANAGERPID = 740248
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 740721
+GIO_LAUNCHED_DESKTOP_FILE_PID = 769000
 # environment
 SSH_AGENT_PID = 740502
 # environment
@@ -225,7 +227,7 @@ GPG_AGENT_INFO = /run/user/101065/gnupg/S.gpg-agent:0:1
 # environment
 PULSE_CLIENTCONFIG = /run/flatpak/pulse/config
 # environment
-JOURNAL_STREAM = 9:1823150
+JOURNAL_STREAM = 9:1825227
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -267,7 +269,7 @@ ZYPAK_BIN = /app/bin
 # environment
 GDMSESSION = ubuntu
 # variable set hash-table stats:
-# Load=128/1024=12%, Rehash=0, Collisions=21/167=13%
+# Load=129/1024=13%, Rehash=0, Collisions=21/168=12%
 
 # Pattern-specific Variable Values
 
@@ -291,11 +293,11 @@ lib/libft/libft.a:
 #  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
+ 
 # automatic
 # @ := lib/libft/libft.a
 # automatic
 # * := 
- 
 # automatic
 # < := 
 # automatic
@@ -416,6 +418,6 @@ src/handler.o:
 # strcache performance: lookups = 47 / hit rate = 48%
 # hash-table stats:
 # Load=24/8192=0%, Rehash=0, Collisions=0/47=0%
-# Finished Make data base on Thu Jun  2 18:19:57 2022
+# Finished Make data base on Thu Jun  2 20:32:30 2022
 
  

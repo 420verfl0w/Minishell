@@ -6,7 +6,7 @@
 /*   By: stales <stales@student.42.angouleme.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 10:38:08 by stales            #+#    #+#             */
-/*   Updated: 2022/06/02 19:22:01 by stales           ###   ########.fr       */
+/*   Updated: 2022/06/02 20:26:14 by stales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 
 # include <limits.h>
 # include <stddef.h>
+# include <signal.h>
 
 ////////////////////////
 //
@@ -69,7 +70,7 @@ void	set_prompt(t_prompt *p);
 //
 ////////////////////////
 
-void	handler(int signum);
+void	handler(int signum, siginfo_t *info, void *ptr);
 
 ////////////////////////
 //

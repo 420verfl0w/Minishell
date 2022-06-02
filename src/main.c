@@ -6,7 +6,7 @@
 /*   By: stales <stales@student.42.angouleme.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 10:37:02 by stales            #+#    #+#             */
-/*   Updated: 2022/06/02 18:26:34 by stales           ###   ########.fr       */
+/*   Updated: 2022/06/02 20:34:05 by stales           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 int	main(int ac, char **av, char **env)
 {
-	t_msh	msh = {
-		.p.name = NULL,
-		.p.opwd = NULL,
-		.p.pwd = NULL
-	};
+	t_msh	msh;
 	
 	msh_console(&msh, ac, av, env);
 	return (0);

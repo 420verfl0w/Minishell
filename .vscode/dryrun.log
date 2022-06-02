@@ -1,7 +1,6 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/nfs/homes/stales/Documents/Minishell'
 make -C lib/libft all
- 
 gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/prompt.o src/prompt.c
 gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/console.o src/console.c
 gcc -Wall -Wextra -Werror -Iincludes -Ilib/libft   -c -o src/handler.o src/handler.c
