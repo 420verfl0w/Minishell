@@ -1,58 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: brda-sil <brda-sil@students.42angouleme    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 10:38:08 by stales            #+#    #+#             */
-/*   Updated: 2022/06/28 08:45:52 by brda-sil         ###   ########.fr       */
+/*   Created: 2022/04/16 12:53:46 by brda-sil          #+#    #+#             */
+/*   Updated: 2022/05/26 14:18:35 by brda-sil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
-
-/* ########################################################################## */
-/* INCLUDE */
-/* ####### */
-
-# include <limits.h>
-# include <stddef.h>
-# include <signal.h>
-
-/* ########################################################################## */
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
 /* ########################################################################## */
 /* CONFIG */
 /* ###### */
 
-# define RED "\033[38;5;196m"
-# define GRE "\033[38;5;82m"
-# define BLU "\033[38;5;69m"
-# define YEL "\033[38;5;220m"
-# define PUR "\033[38;5;93m"
-# define RES "\033[00m"
+# define PARAMS_LIST "cspdiuxX%"
+# define HEX_UPPER "0123456789ABCDEF"
+# define HEX_LOWER "0123456789abcdef"
 
 /* ########################################################################## */
 
 /* ########################################################################## */
-/* STRUCT */
-/* ###### */
+/* LIBRARY */
+/* ####### */
 
-typedef struct s_prompt
-{
-	char	buf[PATH_MAX];
-	char	*name;
-	char	*pwd;
-	char	*opwd;
-	int		i;
-}	t_prompt;
-
-typedef struct s_msh
-{
-	t_prompt	p;
-}	t_msh;
+# include <stdarg.h>
+# include <unistd.h>
+# include <limits.h>
 
 /* ########################################################################## */
 
@@ -60,17 +37,41 @@ typedef struct s_msh
 /* FILES */
 /* ##### */
 
-// console.c
-void		msh_console(t_msh *msh, int ac, char **av, char **env);
+// ft_checkparams.c
+int	ft_checkparams(char c);
 
-// handler.c
-void		handler(int signum, siginfo_t *info, void *ptr);
+// ft_error.c
+int	ft_error(char *msg);
 
-// main.c
-int			main(int ac, char **av, char **env);
+// ft_parse.c
+int	ft_parse(va_list args, const char *format);
 
-// prompt.c
-void		set_prompt(t_prompt *p);
+// ft_printf.c
+int	ft_printf(const char *format, ...);
+
+// ft_put_addr.c
+int	ft_put_addr(va_list args);
+
+// ft_putchar.c
+int	ft_putchar(char c);
+
+// ft_puthex.c
+int	ft_puthex(unsigned long n, char format);
+
+// ft_putnbr.c
+int	ft_putnbr(int n);
+
+// ft_putnbr_u.c
+int	ft_putnbr_u(unsigned int n);
+
+// ft_putstr.c
+int	ft_putstr(char *s);
+
+// ft_sel_params.c
+int	ft_sel_params(va_list args, char param_type);
+
+// ft_strlenn.c
+int	ft_strlenn(char *s);
 
 /* ########################################################################## */
 

@@ -6,14 +6,14 @@
 #    By: brda-sil <brda-sil@students.42angouleme    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/23 01:36:34 by brda-sil          #+#    #+#              #
-#    Updated: 2022/05/26 21:46:42 by brda-sil         ###   ########.fr        #
+#    Updated: 2022/05/26 21:46:21 by brda-sil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # **************************************************************************** #
 # config
 CFLAGS			:= -Wall -Wextra
-TARGET			:= libft.a
+TARGET			:= ft_printf.a
 RM				:= rm -rf
 CC				:= gcc
 VERSION			:= 1.0.0
@@ -34,59 +34,18 @@ OBJ_DIR			:= obj
 INC_DIR			:= includes
 
 # SRC
-SRC_C			:= src/ft_atoi.c \
-				   src/ft_atol.c \
-				   src/ft_bzero.c \
-				   src/ft_calloc.c \
-				   src/ft_get_words.c \
-				   src/ft_isalnum.c \
-				   src/ft_isalpha.c \
-				   src/ft_isascii.c \
-				   src/ft_isdigit.c \
-				   src/ft_isprint.c \
-				   src/ft_itoa.c \
-				   src/ft_lstadd_back.c \
-				   src/ft_lstadd_front.c \
-				   src/ft_lstclear.c \
-				   src/ft_lstdelone.c \
-				   src/ft_lstiter.c \
-				   src/ft_lstlast.c \
-				   src/ft_lstmap.c \
-				   src/ft_lstnew.c \
-				   src/ft_lstsize.c \
-				   src/ft_memchr.c \
-				   src/ft_memcmp.c \
-				   src/ft_memcpy.c \
-				   src/ft_memmove.c \
-				   src/ft_memset.c \
-				   src/ft_nbrlen.c \
-				   src/ft_putchar_fd.c \
-				   src/ft_putendl_fd.c \
-				   src/ft_putnbr_fd.c \
-				   src/ft_putstr_fd.c \
-				   src/ft_split.c \
-				   src/ft_split_free.c \
-				   src/ft_strcat.c \
-				   src/ft_strchr.c \
-				   src/ft_strcpy.c \
-				   src/ft_strcspn.c \
-				   src/ft_strdup.c \
-				   src/ft_striteri.c \
-				   src/ft_strjoin.c \
-				   src/ft_strlcat.c \
-				   src/ft_strlcpy.c \
-				   src/ft_strlen.c \
-				   src/ft_strmapi.c \
-				   src/ft_strncat.c \
-				   src/ft_strncmp.c \
-				   src/ft_strnstr.c \
-				   src/ft_strrchr.c \
-				   src/ft_strspn.c \
-				   src/ft_strtok.c \
-				   src/ft_strtrim.c \
-				   src/ft_substr.c \
-				   src/ft_tolower.c \
-				   src/ft_toupper.c
+SRC_C			:= src/ft_checkparams.c \
+				   src/ft_error.c \
+				   src/ft_parse.c \
+				   src/ft_printf.c \
+				   src/ft_put_addr.c \
+				   src/ft_putchar.c \
+				   src/ft_puthex.c \
+				   src/ft_putnbr.c \
+				   src/ft_putnbr_u.c \
+				   src/ft_putstr.c \
+				   src/ft_sel_params.c \
+				   src/ft_strlenn.c
 
 # OBJ
 OBJ_C			:= $(patsubst $(SRC_DIR)/%,$(OBJ_DIR)/%,$(SRC_C:%.c=%.o))
@@ -129,12 +88,12 @@ LR="\xe2\x95\x9d"
 # utils
 
 define ascii_art
-██╗     ██╗██████╗ ███████╗████████╗
-██║     ██║██╔══██╗██╔════╝╚══██╔══╝
-██║     ██║██████╔╝█████╗     ██║
-██║     ██║██╔══██╗██╔══╝     ██║
-███████╗██║██████╔╝██║        ██║
-╚══════╝╚═╝╚═════╝ ╚═╝        ╚═╝
+███████╗████████╗   ██████╗ ██████╗ ██╗███╗   ██╗████████╗
+██╔════╝╚══██╔══╝   ██╔══██╗██╔══██╗██║████╗  ██║╚══██╔══╝
+█████╗     ██║█████╗██████╔╝██████╔╝██║██╔██╗ ██║   ██║
+██╔══╝     ██║╚════╝██╔═══╝ ██╔══██╗██║██║╚██╗██║   ██║
+██║        ██║      ██║     ██║  ██║██║██║ ╚████║   ██║
+╚═╝        ╚═╝      ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝   ╚═╝
 $(reset)
 endef
 export ascii_art

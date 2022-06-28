@@ -1,0 +1,6 @@
+a.out
+**/*.a
+obj/
+printfTester/
+**/test/
+**/test
